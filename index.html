@@ -16,7 +16,7 @@
 </head>
 <body>
     <div id="nav-bar">
-        <div id="nav-bar-logo-container">
+        <div id="nav-bar-logo-container" onclick="window.location.href='index.html'">
             <div id="nav-bar-logo">
                 <img src="images/logo.png" alt="SDCU Logo" id="logo-image">
             </div>
@@ -25,14 +25,14 @@
 
         <div id="nav-bar-button-container">
             <div id="dropdown">
-                <button class="nav-bar-button dropdown-button">SOLUTIONS
+                <button class="nav-bar-button dropdown-button" onclick="window.location.href='solutions.html'">SOLUTIONS
                     <img src="Images\iconmonstr-arrow-65-16.png">
                 </button>
                 <div id="dropdown-content">
-                    <button class="dropdown-content-button">The Concept</button>
-                    <button class="dropdown-content-button">Intervention</button>
-                    <button class="dropdown-content-button">Production</button>
-                    <button class="dropdown-content-button">FAQ</button>
+                    <button class="dropdown-content-button" onclick="window.location.href='concept.html'">The Concept</button>
+                    <button class="dropdown-content-button" onclick="window.location.href='intervention.html'">Intervention</button>
+                    <button class="dropdown-content-button" onclick="window.location.href='production.html'">Production</button>
+                    <button class="dropdown-content-button" onclick="window.location.href='faq.html'">FAQ</button>
                 </div>
             </div>
 
@@ -50,15 +50,23 @@
             <input type="radio" name="radio-btn" id="radio4">
             <div class="slide first">
                 <img src="Images\SlideShowImages\SlideShow1.jpg" alt="Slide 1">
+                <h1 id="title1">Title1</h1>
+                <p>Text1</p>
             </div>
             <div class="slide">
                 <img src="Images\SlideShowImages\SlideShow2.jpg" alt="Slide 2">
+                <!-- <h1>Title2</h1>
+                <p>Text2</p> -->
             </div>
             <div class="slide">
                 <img src="Images\SlideShowImages\SlideShow3.jpg" alt="Slide 3">
+                <!-- <h1>Title3</h1>
+                <p>Text3</p> -->
             </div>
             <div class="slide">
                 <img src="Images\SlideShowImages\SlideShow4.jpg" alt="Slide 4">
+                <!-- <h1>Title4</h1>
+                <p>Text4</p> -->
             </div>
             <div class="navigation-auto">
                 <div class="auto-btn1"></div>
@@ -72,9 +80,45 @@
             <label for="radio2" class="manual-btn"></label>
             <label for="radio3" class="manual-btn"></label>
             <label for="radio4" class="manual-btn"></label>
-
         </div>
-
+    </div>
+    <div id="about-container">
+        <h3 class="about-text about-h3">ABOUT US</h3>
+        <h1 class="about-text about-h1">INCREASE YOUR PRODUCTION</h1>
+        <div id="about-divider"></div>
+        <p class="about-text about-p1">If sand, solids, or particulate production is impairing your true production capabilities, then the novel technologies and game changing solutions can enable you to increase your production, whilst neutralizing your sand, solids, or particulate production challenges at surface</p>
+        <p class="about-text about-p2">With over 13 years of operational experience we have the expertise, knowledge, and certification required to provide complete sand/solids management solutions. Our Innovative Dynamic Desander System (DDSTM) requires minimal space, has low rigging/installation time and POB. We will take your Desanding challenges to the next level with our semi or fully autonomous units.</p>
+    </div>
+    <div id="qa-container">
+        <div id="qa-inner-container">
+            <div class="q-container">Do you have challenges with your conventional sand control solution?</div>
+            <div class="qa-spacer">
+                <img src="Images\iconmonstr-arrow-right-lined-64.png">
+            </div>
+            <div class="a-container">
+                <p>Removal of solids from well flow using our <strong>Dynamic Desander</strong> technology boosts production and simplifies interventions.</p>
+            </div>
+            <div class="q-container">Do you need to handle sand / solids at surface?</div>
+            <div class="qa-spacer">
+                <img src="Images\iconmonstr-arrow-right-lined-64.png">
+            </div>
+            <div class="a-container">
+                <p>The <strong>Dynamic Desander</strong> technology is standalone, highly automated and provide real-time data on the separated solids (eg. pressure, temp, weights etc)</p>
+            </div>
+            
+            <div id="customer-container">
+                <div id="customer-divider"></div>
+                <p><i>“Putting the Dynamic Desander unit into the core of our sand management concept significantly reduced cost per barrel and at the same time improved efficiency. We have now managed to overcome the shortcomings of conventional solutions thus making the separation more efficient and controllable”</i></p>
+                <p>-SDCU customer</p>
+            </div>
+        </div>
+        <img src="Images\DDS_3D-Image-uai-516x891.png" id="dds-img">
+    </div>
+    <div id="benefits-container">
+        <div id="benefits-title-container">
+            <h1>WHY CHOOSE US AS YOUR PREFERRED SUPPLIER?</h1>
+            <div id="benefits-divider"></div>
+        </div>
     </div>
 </body>
 </html>
