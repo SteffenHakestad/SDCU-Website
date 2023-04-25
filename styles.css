@@ -13,10 +13,14 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: white;
     width: 100%;
     height: 8rem;
     z-index: 20;
+    background-color: white;
+    background-image: url("Images/Banner.png");
+    background-size: cover;
+    background-position: center;
+    
 }
 
 #nav-bar-logo-container{
@@ -37,7 +41,7 @@ body{
     height: 120px;
 }
 #nav-bar-title{
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     margin-left: 1rem;
     font-size: 4rem;
     color: #2c4c9c;
@@ -54,16 +58,17 @@ body{
 .nav-bar-button{
     display: flex;
     align-items: center;
+    cursor: pointer;
     gap: 5px;
     font-size: 1rem;
-    color: #2c4c9c;
+    color: white;
+    /* color: #2c4c9c; */
     background-color: transparent;
     border: none;
 }
 .nav-bar-button:hover{
     color: #ff0000;
-    text-shadow: #474747 0px 0px 1px;
-    cursor: pointer;
+    
 }
 
 
@@ -213,14 +218,19 @@ body{
 
 #about-container{
     width: 100%;
-    height: 30rem;
+
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     flex-direction: column;
     background-color: white;
     padding-top: 2rem;
+    padding-bottom: 2rem;
+    min-width: 20rem;
+
 }
+
 .about-text{
     font-family: 'Raleway', sans-serif;
     color: #2c4c9c;
@@ -236,6 +246,7 @@ body{
     width: 50rem;
     color: black;
     font-size: 1.2rem;
+    font-family: 'Titillium Web', sans-serif;
 }
 #about-divider{
     background-color: #2c4c9c;
@@ -351,6 +362,7 @@ body{
 }
 #statement-container{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     width: 100%;
 }
@@ -360,35 +372,86 @@ body{
     margin: 0rem 0rem 1rem 0rem;
 }
 .benefits-example{
+    flex-wrap: wrap;
     width: 33%;
     text-align: center;
     height: 100%;
     padding-left: 3rem;
     padding-right: 3rem;
+    max-width: 40rem;
+    min-width: 30rem;
+    max-height: 30rem;
+    min-height: 30rem;
 }
 .benefits-image{
     width: 10rem;
     margin: 2rem;
 }
 
+
+
 #partners-container{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
-    background-color: yellow;
+    background-color: whitesmoke;
     height: auto;
-    padding: 3rem 20rem 3rem 20rem;
+    padding: 3rem 10rem 3rem 10rem;
 }
 .partner-link{
     -webkit-appearance: button;
     -moz-appearance: button;
     appearance: button;
     cursor: pointer;
+    width: fit-content;
+    height: fit-content;
     background-color: white;
     border: 2px solid black;
     border-radius: 10px;
     padding: .2rem;
     margin: 1rem;
-    
+}
+.partner-link img{
+    max-width: 170px;
+}
+
+
+
+#contact-container{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background-color: yellow;
+    padding: 3rem 20rem 3rem 20rem;
+}
+#contact-container p{
+    font-size: 2rem;
+}
+#contact-divider{
+    background-color: #2c4c9c;
+    width: 100%;
+    height: .1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+#contact-inner-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+
+    min-width: 16rem;
+}
+#email-text{
+    text-decoration: none;
+}
+
+.blue-text{
+    color: #2c4c9c;
+}
+.light{
+    font-family: 'Titillium Web', sans-serif;
 }
