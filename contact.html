@@ -16,7 +16,7 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="navbar-logo-container">
+        <div class="navbar-logo-container" onclick="window.location.href='index.html'">
             <img src="images/logo2.png" alt="SDCU Logo" id="logo-image">
             <div class="brand-title">SDCU</div>
         </div>
@@ -28,42 +28,51 @@
         </a>
         <div class="navbar-links">
             <ul>
-                <li><a href="#">Solutions ˅</a></li>
+                <li>
+                  <div class="dropdown">
+                    <a href="#" id="dropdown-button">Solutions<img src="Images\iconmonstr-arrow-65-16.png"></a>
+                    <div id="dropdown-content">
+                      <ul>
+                        <li><a href="#" class="dropdown-content-button">The Concept</a></li>
+                        <li><a href="#" class="dropdown-content-button">Intervention</a></li>
+                        <li><a href="#" class="dropdown-content-button">Production</a></li>
+                        <li><a href="#" class="dropdown-content-button">FAQ</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
                 <li><a href="#">Case Studies</a></li>
                 <li><a href="#">QHSE</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
-            </ul>
+              </ul>
+              
         </div>
     </nav>
 </body>
 </html>
 
 
-
-<!-- <div id="nav-bar">
-    <div id="nav-bar-logo-container" onclick="window.location.href='index.html'">
-        <div id="nav-bar-logo">
-            <img src="images/logo.png" alt="SDCU Logo" id="logo-image">
+                <!-- <li class="mobile-button"><a href="#" >The Concept</a></li>
+                <li class="mobile-button"><a href="#">Intervention</a></li>
+                <li class="mobile-button"><a href="#">Production</a></li>
+                <li class="mobile-button"><a href="#">FAQ</a></li> -->
+<!-- <div id="nav-bar-button-container">
+    <div id="dropdown">
+        <button class="nav-bar-button dropdown-button" onclick="window.location.href='solutions.html'">SOLUTIONS
+            <img src="Images\iconmonstr-arrow-65-16.png">
+        </button>
+        <div id="dropdown-content">
+            <button class="dropdown-content-button" onclick="window.location.href='concept.html'">The Concept</button>
+            <button class="dropdown-content-button" onclick="window.location.href='intervention.html'">Intervention</button>
+            <button class="dropdown-content-button" onclick="window.location.href='production.html'">Production</button>
+            <button class="dropdown-content-button" onclick="window.location.href='faq.html'">FAQ</button>
         </div>
-        <h1 id="nav-bar-title">SDCU</h1>
     </div>
 
-    <div id="nav-bar-button-container">
-        <div id="dropdown">
-            <button class="nav-bar-button dropdown-button" onclick="window.location.href='solutions.html'">SOLUTIONS
-                <img src="Images\iconmonstr-arrow-65-16.png">
-            </button>
-            <div id="dropdown-content">
-                <button class="dropdown-content-button" onclick="window.location.href='concept.html'">The Concept</button>
-                <button class="dropdown-content-button" onclick="window.location.href='intervention.html'">Intervention</button>
-                <button class="dropdown-content-button" onclick="window.location.href='production.html'">Production</button>
-                <button class="dropdown-content-button" onclick="window.location.href='faq.html'">FAQ</button>
-            </div>
-        </div>
-
-        <button class="nav-bar-button link" onclick="window.location.href='case-studies.html'">CASE STUDIES</button>
-        <button class="nav-bar-button link" onclick="window.location.href='qhse.html'">QHSE</button>
-        <button class="nav-bar-button link" onclick="window.location.href='about.html'">ABOUT</button>
-        <button class="nav-bar-button link" onclick="window.location.href='contact.html'">CONTACT</button>
-    </div> -->
+    <button class="nav-bar-button link" onclick="window.location.href='case-studies.html'">CASE STUDIES</button>
+    <button class="nav-bar-button link" onclick="window.location.href='qhse.html'">QHSE</button>
+    <button class="nav-bar-button link" onclick="window.location.href='about.html'">ABOUT</button>
+    <button class="nav-bar-button link" onclick="window.location.href='contact.html'">CONTACT</button>
+</div>
+</div> -->
