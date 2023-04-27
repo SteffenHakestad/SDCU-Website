@@ -23,6 +23,19 @@ radioButtons.forEach(radioButton => {
   });
 });
 
+const toggleButton = document.getElementsByClassName("toggle-button")[0];
+const navbarLinks = document.getElementsByClassName("navbar-links")[0];
+toggleButton.addEventListener("click", () => {
+    navbarLinks.classList.toggle("active");
+});
+
+
+
+
+
+
+
+
 // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
 // window.onscroll = function() {scrollFunction()};
 

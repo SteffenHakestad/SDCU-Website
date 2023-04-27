@@ -228,6 +228,7 @@ body{
     padding-top: 2rem;
     padding-bottom: 2rem;
     min-width: 20rem;
+    min-width: 15rem;
 
 }
 
@@ -267,8 +268,10 @@ body{
 }
 #qa-inner-container{
     display: flex;
+    justify-content: center;
     height: 100%;
     width: 60%;
+    max-width: 70rem;
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
@@ -285,9 +288,11 @@ body{
     padding: 1.5rem;
     font-size: 1.25rem;
     height: auto;
-    width: 40%;
+    width: 30%;
     margin: .5rem;
     border-radius: 10px;
+    max-width: 20rem;
+    min-width: 15rem;
 }
 .a-container{
     background-color: transparent;
@@ -333,7 +338,11 @@ body{
     height: auto;
 }
 
-
+@media (max-width: 600px) {
+    #dds-img{
+        display: none;
+    }
+}
 
 #benefits-container{
     display: flex;
@@ -422,7 +431,7 @@ body{
     width: 100%;
     height: auto;
     text-align: center;
-    background-color: yellow;
+    background-color: #fdc613;
     padding: 3rem 20rem 3rem 20rem;
 }
 #contact-container p{
@@ -447,6 +456,7 @@ body{
 }
 #email-text{
     text-decoration: none;
+    color: #2c4c9c;
 }
 
 .blue-text{
