@@ -1,20 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="main.js" defer></script>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="main.js" defer></script> -->
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="#">
-    <link rel="icon" href="Images\logo.png">
+    <link rel="icon" href="Images\logo2.png">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Mitr:wght@400;500&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');
     </style>
-    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Case Studies</title>
+    <title>Case Studies - SDCU</title>
 </head>
 <body>
-    <h1>Case Studies</h1>
+    <div id="navbar-placeholder"></div>
+    <script>
+        $(function() {
+          $("#navbar-placeholder").load("navbar.html");
+        });
+      </script>
+    <div id="multi-page-header-container">
+        <h1>Case Studies</h1>
+        <div id="multi-page-header-divider"></div>
+        <p>The DDS™ has consistently delivered exceptional separation efficiency during even the most challenging and extreme CT well cleanout and well production flow back operations.</p>
+    </div>
+    <div id="case-history-page-container">
+        <div id="case-history-container">
+            <button class="case-history-button">
+                <div class="case-history-wrapper">
+                  <a>Case History One</a>
+                  <img src="Images\CaseHistory1.jpg" alt="CaseHistory1">
+                </div>
+            </button>
+            <button class="case-history-button">
+                <div class="case-history-wrapper">
+                  <a>Case History Two</a>
+                  <img src="Images\CaseHistory2.jpg" alt="CaseHistory2">
+                </div>
+            </button>
+            <button class="case-history-button">
+                <div class="case-history-wrapper">
+                  <a>Case History Three</a>
+                  <img src="Images\CaseHistory3.jpg" alt="CaseHistory3">
+                </div>
+            </button>
+            <button class="case-history-button">
+                <div class="case-history-wrapper">
+                  <a>Case History Four</a>
+                  <img src="Images\CaseHistory4.jpg" alt="CaseHistory4">
+                </div>
+            </button>
+            <button class="case-history-button">
+                <div class="case-history-wrapper">
+                  <a>Case History Five</a>
+                  <img src="Images\CaseHistory5.jpeg" alt="CaseHistory5">
+                </div>
+            </button>
+        </div>
+        <div id="page-index-container">
+            <div id="button-index-container">
+                <button class="page-index-button" onclick="window.location.href='solutions.html'">Solutions</button>
+                <button class="page-index-button" onclick="window.location.href='concept.html'">The Concept</button>
+                <button class="page-index-button" onclick="window.location.href='intervention.html'">Intervention</button>
+                <button class="page-index-button" onclick="window.location.href='production.html'">Production</button>
+                <button class="page-index-button" onclick="window.location.href='faq.html'">FAQ</button>
+            </div>
+            <div id="page-index-q-container">
+                <h3 class="blue-text">Questions?</h3>
+                <a id="email-text" class="blue-text" href="mailto:John.dale@sdcu.no">John.dale@sdcu.no</a>
+                <div class="blue-text">+47 48 14 52 80</div>
+                <a>Or check our </a><a class="blue-text" id="faq-link" onclick="window.location.href='faq.html'">FAQ</a><a>!</a>
+
+            </div>
+        </div>
+    </div>
+    <div id="footer-placeholder"></div>
+    <script>
+        $(function() {
+          $("#footer-placeholder").load("footer.html");
+        });
+      </script>
+
+
+
 </body>
-</html>

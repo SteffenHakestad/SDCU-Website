@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- <script src="main.js" defer></script> -->
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="#">
     <link rel="icon" href="Images\logo.png">
@@ -14,20 +13,17 @@
     </style>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SDCU - Production</title>
 </head>
 <body>
-    <div id="navbar-placeholder"></div>
-    <script>
-        $(function() {
-          $("#navbar-placeholder").load("navbar.html");
-        });
-      </script>
-    <div id="footer-placeholder"></div>
-    <script>
-        $(function() {
-        $("#footer-placeholder").load("footer.html");
-        });
-    </script>
+    <div id="contact-container">
+        <div id="contact-inner-container">
+            <h5 class="blue-text">CONTACT</h5>
+            <p class="blue-text">Don't hesitate to get in touch!</p>
+            <div id="contact-divider"></div>
+            <h5 class="blue-text">SDCU</h5><div class="light">Postboks 419 5353 Straume</div>
+            <div class="light">Phone: </div><div class="blue-text">+47 48 14 52 80</div>
+            <div class="light">Mail: </div><a id="email-text" href="mailto:John.dale@sdcu.no">John.dale@sdcu.no</a>
+        </div> 
+    </div>
 </body>
 </html>

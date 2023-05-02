@@ -21,11 +21,11 @@ toggleButton.addEventListener("click", () => {
     navbarLinks.classList.toggle("active");
 });
 
-//When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+//When the user scrolls down 90px from the top of the document, resize the navbar's padding and the logo's font size
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+  if (document.body.scrollTop > 90 || document.documentElement.scrollTop > 90) {
     document.getElementById("navbar").style.height = "4rem";
     document.getElementById("logo-image").style.width = "3rem";
     document.getElementById("brand-title").style.setProperty("font-size", "3rem");

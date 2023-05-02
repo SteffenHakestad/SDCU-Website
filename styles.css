@@ -8,15 +8,271 @@ body{
     background-color: white;
 }
 
+/*START OF MULTI PAGE ELEMENTS/*
+/*NAVBAR, HEADER AND FOOTER*/
+/*Start of Navbar*/
+#navbar {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 5rem 0rem 5rem;
+    background-image: url("Images/Banner.png");
+    background-position: left;
+    color: white;
+    background-color: white;
+    font-family: 'Titillium Web', sans-serif;
+    max-height: 7rem;
+    min-height: 4rem;
+    transition: height 0.3s ease-in-out;
+}
+.navbar-logo-container{
+    display: flex;
+    align-items: center;
+    margin-left: .5rem;
+    cursor: pointer;
+}
+.navbar-logo-container img{
+    margin: .25rem .25rem .25rem .5rem;
+    max-width: 5rem;
+    transition: width 0.3s ease-in-out;
+}
+#brand-title{
+    font-size: 4rem;
+    margin: .5rem;
+    color: #2c4c9c;
+    font-family: 'Titillium Web', sans-serif;
+    transition: font-size 0.3s ease-in-out;
+}
+.navbar-links ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+}
+.navbar-links li{
+    list-style: none;
+    position: relative;
+}
+.navbar-links li a{
+    text-decoration: none;
+    color: #2c4c9c;
+    cursor: pointer;
+    padding: 1rem;
+    display: block;
+}
+.navbar-links li a:hover{
+    color: red;
+}
+.toggle-button{
+    position: absolute;
+    top: 35%;
+    right: 2rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+.bar{
+    background-color: #2c4c9c;
+    height: 3px;
+    width: 100%;
+    border-radius: 10px;
+}
+#dropdown-content ul {
+    display: block;
+}
+#dropdown-content li {
+    display: block;
+}
+#dropdown-content a {
+    display: block;
+}
+#red-arrow {
+    display: none;
+}
+.dropdown {
+    position: static;
+}
+.dropdown #dropdown-content{
+    display: none;
+    background-color: white;
+    border-radius: .5rem;
+    min-width: 160px;
+    z-index: 1;
+    padding: .5rem;
+}
+.dropdown:hover #dropdown-content {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    border-radius: .5rem;
+}
+.dropdown-content-button {
+    font-family: 'Titillium Web', sans-serif;
+    color: white;
+    background-color: #2c4c9c;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    font-size: 1.2rem;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    padding-left: .5rem;
+    border-radius: .2rem;
+    margin-top: .2rem;
+    margin-bottom: .2rem;
+    height: auto;
+}
+.dropdown-content-button:hover {
+    background-color: #fdc613;
+    color: white;
+    text-shadow: #474747 0px 0px 1px;
+}
 
 
+@media (max-width: 1000px){
+    .navbar-logo-container img{
+        width: 60px;
+        margin: .25rem .25rem .25rem .25rem;
+    }
+    .brand-title{
+        font-size: 3rem;
+        margin: .5rem;}
+    .toggle-button{
+        display: flex;
+    }
+    .navbar-links{
+        display: none;
+        width: 100%;
+    }
+    #navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        max-height: 50rem;
+    }
+    .navbar-links ul{
+        width: 100%;
+        flex-direction: column;
+    }
+    .navbar-links ul li{
+        text-align: center;
+        
+    }
+    .navbar-links li a{
+        padding: .5rem 1rem;
+    }
+    .navbar-links.active{
+        display: flex;
+        justify-content: flex-end;
+        
+    }
+    .mobile-button{
+        display: block;
+    }
+    .dropdown #dropdown-content{
+        top: 6%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+    .dropdown-content-button{
+        width: 50%;
+        text-align: center;
+    }
+}
+/*End of Navbar*/
+
+
+/*Start of Multi Page header*/
+#multi-page-header-container{
+    background-color: #2c4c9c;
+    color: white;
+    width: 100%;
+    text-align: left;
+    font-size: 1.5rem;
+    padding: 10rem 15rem 10rem 5rem;
+}
+#multi-page-header-container h1{
+    font-family: 'Titillium Web', sans-serif;
+} 
+#multi-page-header-container p {
+    font-family: 'Raleway', sans-serif;
+    padding: 0rem 50rem 0rem 0rem;
+    font-family: 'Titillium Web', sans-serif;
+
+}
+#multi-page-header-divider{
+    width: 100%;
+    height: .1rem;
+    background-color: white;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+/*End of Multi Page header*/
+/* Start of Footer.*/
+#contact-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background-color: #fdc613;
+    padding: 3rem 20rem 3rem 20rem;
+}
+@media (max-width: 600px){
+    #contact-container{
+        padding: 0;
+    }
+}
+#contact-container p{
+    font-size: 2rem;
+}
+#contact-divider{
+    background-color: #2c4c9c;
+    width: 100%;
+    height: .1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+#contact-inner-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    min-width: 16rem;
+}
+#email-text{
+    text-decoration: none;
+    color: #2c4c9c;
+}
+
+.blue-text{
+    color: #2c4c9c;
+}
+.light{
+    font-family: 'Titillium Web', sans-serif;
+}
+/* End of Footer. */
+
+
+
+/*START OF HOME PAGE*/
+/* Start of image slider. Home page*/
 #slide-container{
     width: 100%;
     height: 32rem;
     overflow: hidden;
     position: relative;
-
-
 }
 .slides{
     width: 500%;
@@ -50,9 +306,6 @@ body{
     transform: translate(-50%, -50%);
     color: white;
 }
-
-
-
 .navigation-manual{
     position: absolute;
     width: 100%;
@@ -86,23 +339,18 @@ body{
 #radio4:checked ~ .first{
     margin-left: -60%;
 }
-
-
-
 .navigation-auto{
     position: absolute;
     display: flex;
     width: 100%;
     justify-content: center;
     margin-top: 30rem;
-
 }
 .navigation-auto div{
     border: 2px solid white;
     padding: 5px;
     border-radius: 10px;
     transition: .5s;
-
 }
 .navigation-auto div:not(:last-child){
     margin-right: 1rem;
@@ -119,9 +367,10 @@ body{
 #radio4:checked ~ .navigation-auto .auto-btn4{
     background: #4164bd;
 }
+/* End of image slider. Home page*/
 
 
-
+/* Start of "About us. Home page */
 #about-container{
     width: 100%;
     display: flex;
@@ -133,11 +382,9 @@ body{
     padding-top: 2rem;
     padding-bottom: 2rem;
     background: linear-gradient(45deg, transparent 49%, #fdc6131a 49% 51%, transparent 51%) , linear-gradient(-45deg, transparent 49%, #fdc61317 49% 51%, transparent 51%);
-        background-size: 4em 4em;
-        background-color: rgb(255, 255, 255);
-        
+    background-size: 4em 4em;
+    background-color: rgb(255, 255, 255);  
 }
-
 .about-text{
     font-family: 'Raleway', sans-serif;
     color: #2c4c9c;
@@ -169,15 +416,15 @@ body{
     height: .1rem;
     margin-bottom: 1rem;
 }
+/* End of "About us. Home page */
 
-
+/* Start of QNA. Home page */
 #qa-container{
     display: flex;
     width: 100%;
     height: auto;
     background-color: #2c4c9c;
     padding: 5rem 5rem 1rem 5rem;
-
 }
 @media (max-width: 600px){
     #qa-container{
@@ -198,7 +445,6 @@ body{
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
-
 }
 .q-container,
 .a-container{
@@ -221,17 +467,14 @@ body{
     color: white;
     font-size: 1.1rem;
 }
-
 @media (max-width: 600px){
     .q-container,
     .a-container{
         padding: .5rem;
         width: 35%;
         font-size: .80rem;
-        
     }
 }
-
 .qa-spacer{
     display: flex;
     justify-content: center;
@@ -240,13 +483,26 @@ body{
     width: 15%;
     margin: 0;
 }
-
-/* @media (max-width: 600px){
-    .qa-spacer img{
+#customer-divider{
+    background-color: white;
+    width: 50%;
+    height: .1rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+#dds-img{
+    display: block;
+    margin-left: auto;
+    max-width: 416px;
+    max-height: 791px;
+    width: auto;
+    height: auto;
+}
+@media (max-width: 600px) {
+    #dds-img{
         display: none;
     }
-} */
-
+}
 #customer-container{
     display: flex;
     justify-content: center;
@@ -267,31 +523,10 @@ body{
         padding: 0rem .5rem 0rem .5rem;
     }
 }
+/* End of QNA. Home page */
 
 
-
-#customer-divider{
-    background-color: white;
-    width: 50%;
-    height: .1rem;
-    margin-bottom: 1rem;
-    margin-top: 2rem;
-}
-#dds-img{
-    display: block;
-    margin-left: auto;
-    max-width: 416px;
-    max-height: 791px;
-    width: auto;
-    height: auto;
-}
-
-@media (max-width: 600px) {
-    #dds-img{
-        display: none;
-    }
-}
-
+/* Start of "Why choose us?". Home page */
 #benefits-container{
     display: flex;
     flex-wrap: wrap;
@@ -349,9 +584,11 @@ body{
     width: 10rem;
     margin: 2rem;
 }
+/* Start of "Why choose us?". Home page */
 
 
 
+/* Start of Partners. Home page */
 #partners-container{
     display: flex;
     justify-content: center;
@@ -384,53 +621,122 @@ body{
 .partner-link img{
     max-width: 170px;
 }
+/* End of Partners. Home page */
+/*END OF HOME PAGE*/
 
 
 
-#contact-container{
+
+
+/*START OF CASE STUDIES PAGE*/
+/*Start of Case history container*/
+#case-history-page-container{
+    display: flex;
+    flex-direction: row;
+}
+#case-history-container{
+    width: 75%;
+    padding: 5rem;
+}
+#page-index-container{
+    position: fixed;
+    right: 0;
+    top: 50;
+    width: 25%;
+    padding: 5rem 2rem 5rem 2rem;
+}
+/*End of Case history container*/
+/*Start of Case history button*/
+.case-history-button{
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    cursor: pointer;
     width: 100%;
-    height: auto;
-    text-align: center;
-    background-color: #fdc613;
-    padding: 3rem 20rem 3rem 20rem;
+    height: 30rem;
+    border-radius: 1rem;
+    border: none;
+    overflow: hidden;
+    margin-bottom: 5rem;
 }
-@media (max-width: 600px){
-    #contact-container{
-        padding: 0;
-    }
+  .case-history-wrapper{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
 }
+  .case-history-wrapper a{
+    position: absolute;
+    bottom: 40%;
+    left: 0;
+    margin-left: 2rem;
+    text-align: left;
+    font-size: 3rem;
+    color: white;
+    z-index: 2;
+    text-shadow: #474747 3px 3px 2px;
+}
+  .case-history-wrapper img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    transform: scale(1.2);
+    transition: transform.5s;
+    z-index: 1;
+    filter: blur(0px);
+  }
+  .case-history-button:hover .case-history-wrapper img{
+    transform: scale(1);
+    filter: blur(4px);
+}
+/*End of Case history button*/
 
-#contact-container p{
-    font-size: 2rem;
-}
-#contact-divider{
-    background-color: #2c4c9c;
+
+/*Start of Questions Container*/
+#page-index-q-container{
+    background-color: #fdc613;
+    border-radius: .3rem;
     width: 100%;
-    height: .1rem;
-    margin-top: 1rem;
+    padding: 1.5rem;
+}
+#page-index-q-container h3{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 2rem;
     margin-bottom: 1rem;
 }
-#contact-inner-container{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 100%;
-    height: auto;
-
-    min-width: 16rem;
+#page-index-q-container a, 
+#page-index-q-container div{
+    font-size: 1.3rem;
 }
-#email-text{
+#faq-link{
     text-decoration: none;
-    color: #2c4c9c;
+    cursor: pointer;
 }
+/*End of Questions Container*/
 
-.blue-text{
-    color: #2c4c9c;
+/*Start of Page Index Buttons*/
+#button-index-container{
+    width: 100%;
+    margin-bottom: 1rem;
 }
-.light{
+.page-index-button{
     font-family: 'Titillium Web', sans-serif;
+    cursor: pointer;
+    background-color: #2c4c9c;
+    border: none;
+    border-radius: .2rem;
+    margin-bottom: .1rem;
+    padding: .5rem 0rem .5rem 0rem;
+    color: white;
+    width: 100%;
+    font-size: 1.3rem;
 }
+.page-index-button:hover{
+    background-color: #fdc613;
+}
+/*End of Page Index Buttons*/
