@@ -18,9 +18,10 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0rem 5rem 0rem 5rem;
+    padding: 0rem 5rem 0rem 0rem;
     background-image: url("Images/Banner.png");
     background-position: left;
+    background-repeat: no-repeat;
     color: white;
     background-color: white;
     font-family: 'Titillium Web', sans-serif;
@@ -198,6 +199,7 @@ body{
     text-align: left;
     font-size: 1.5rem;
     padding: 10rem 15rem 10rem 5rem;
+
 }
 #multi-page-header-container h1{
     font-family: 'Titillium Web', sans-serif;
@@ -215,6 +217,27 @@ body{
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
+@media (max-width: 1500px){
+    #multi-page-header-container{
+        padding: 8rem 5rem 5rem 5rem;
+        font-size: 1.5rem;
+    }
+    #multi-page-header-container p {
+        padding: 0;
+    
+    }
+}
+@media (max-width: 600px){
+    #multi-page-header-container{
+        padding: 8rem 5rem 5rem 5rem;
+        font-size: 1.2rem;
+    }
+    #multi-page-header-container p {
+        padding: 0;
+    
+    }
+}
+
 /*End of Multi Page header*/
 /* Start of Footer.*/
 #contact-container{
@@ -624,6 +647,98 @@ body{
 /* End of Partners. Home page */
 /*END OF HOME PAGE*/
 
+/*START OF Solutions PAGE*/
+/*Start of Solutions container*/
+#solutions-page-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding: 3rem 10rem 3rem 10rem;
+}
+/*End of Solutions container*/
+/*Start of Solutions button*/
+.solutions-page-button{
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    width: 35rem;
+    min-width: 30rem;
+    height: 20rem;
+    border-radius: 1rem;
+    border: none;
+    overflow: hidden;
+    margin: 2rem;
+}
+.solutions-page-wrapper{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+}
+.solutions-page-wrapper a{
+    position: absolute;
+    bottom: 40%;
+    left: 0;
+    margin-left: 2rem;
+    text-align: left;
+    font-size: 3rem;
+    color: white;
+    z-index: 2;
+    text-shadow: #474747 3px 3px 2px;
+}
+.solutions-page-wrapper img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    transform: scale(1.2);
+    transition: transform.5s;
+    z-index: 1;
+    filter: blur(0px);
+  }
+.solutions-page-button:hover .solutions-page-wrapper img{
+    transform: scale(1);
+    filter: blur(4px);
+}
+
+
+@media (max-width: 600px){
+    .solutions-page-button{
+        min-width: 25rem;
+        margin: 0rem 0rem 2rem 0rem;
+        height: 15rem;
+    }
+    #solutions-page-container{
+        padding: 3rem 1rem 3rem 1rem;
+    }
+    .solutions-page-wrapper a{
+        font-size: 2rem;
+    }
+}
+@media (max-width: 400px){
+    .solutions-page-button{
+        min-width: 20rem;
+        height: 10rem;
+        margin: 0rem 0rem 2rem 0rem;
+    }
+    .solutions-page-wrapper a{
+        font-size: 1.5rem;
+    }
+}
+
+/*End of Solutions button*/
+
+
+
+
+
+/*END OF Solutions PAGE*/
 
 
 
@@ -637,6 +752,7 @@ body{
 #case-history-container{
     width: 75%;
     padding: 5rem;
+    max-width: 100rem;
 }
 #page-index-container{
     position: fixed;
@@ -697,6 +813,16 @@ body{
 /*End of Case history button*/
 
 
+
+
+
+
+
+
+
+
+
+
 /*Start of Questions Container*/
 #page-index-q-container{
     background-color: #fdc613;
@@ -740,3 +866,78 @@ body{
     background-color: #fdc613;
 }
 /*End of Page Index Buttons*/
+
+
+/*Start of QHSE Page*/
+/*Start of QHSE Main Container*/
+#qhse-main-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    font-family: 'Titillium Web', sans-serif;
+    padding: 3rem 15rem 5rem 15rem;
+    text-align: center;
+    
+}
+#qhse-main-container h3{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+}
+#qhse-main-container p{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.2rem;
+    color: black;
+    margin-bottom: 1rem
+}
+@media (max-width: 1000px){
+    #qhse-main-container{
+        padding: 3rem 1rem 5rem 1rem;
+    }
+    #qhse-main-container h3{
+        font-size: 1.2rem;
+    }
+    #qhse-main-container p{
+        font-size: 1rem;
+    }
+}
+@media (max-width: 600px){
+    #qhse-main-container{
+        padding: 3rem .5rem 5rem .5rem;
+    }
+    #qhse-main-container h3{
+        font-size: 1.1rem;
+    }
+    #qhse-main-container p{
+        font-size: .9rem;
+    }
+}
+/*End of QHSE Main Container*/
+/*Start of Certification Image Container*/
+#certification-image-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* margin: 3rem 20rem 0rem 20rem; */
+    width: 100%;
+    border-top: solid #2c4c9c 2px;
+    border-bottom: solid #2c4c9c 2px;
+}
+@media (max-width: 1000px){
+    #certification-image-container{
+        margin: 3rem 0rem 0rem 0rem;
+    }
+}
+@media (max-width: 600px){
+    #certification-image-container{
+        margin: 3rem 1rem 0rem 1rem;
+    }
+}
+/*End of Certification Image Container*/
+
+/*End of QHSE Page*/
+
+
