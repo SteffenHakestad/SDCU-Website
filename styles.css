@@ -712,7 +712,7 @@ body{
     height: 100%;
     border-radius: 1rem;
     transform: scale(1.2);
-    transition: transform.5s;
+    transition: all .5s;
     z-index: 1;
     filter: blur(0px);
   }
@@ -1139,7 +1139,7 @@ body{
     height: 100%;
     border-radius: 1rem;
     transform: scale(1.2);
-    transition: transform.5s;
+    transition: all .5s;
     z-index: 1;
     filter: blur(0px);
   }
@@ -1152,19 +1152,98 @@ body{
 
 /*Start of Case History # Page*/
 
-#case-history-wrapper{
+#case-study-wrapper{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: left;
     align-items: center;
     width: 100%;
-    background-color: green;
+
 }
-#case-history-wrapper img{
+#case-study-top-img{
     width: auto;
     height: auto;
     max-width: 1200px;
+    border-radius: 1rem;
+    margin: 1rem;
+}
+#case-study-outer-text-container{
+    display: flex;
+    flex-direction: column;
+}
+#case-study-outer-text-container h3{
+    font-family: 'Titillium Web', sans-serif;
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+}
+.case-study-text-container{
+    font-family: 'Titillium Web', sans-serif;
+    display: flex;
+    align-items: center;
+}
+.case-study-text-container p{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 2rem;
 }
 
+.case-study-text-container p{
+    font-size: 1rem;
+}
+.case-study-text-container img{
+    margin-right: 5px;
+    padding: 0;
+}
+/*Start of Case Study Table*/
+#table-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+#center-table-header{
+    text-align: center;
+}
+#table-container table{
+    border-collapse: collapse;
+    border: 3px solid #2c4c9c;
+    border-radius: 1rem;
+    padding: .5rem;
+    
+}
+#table-container table tr{
+    width: 50%;
+    
+    
+    
+}
+#table-container table td{
+    font-family: 'Titillium Web', sans-serif;
+    margin: 0;
+    border: 1px solid black;
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+/*End of Case Study Table*/
+#pdf-btn{
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5rem;
+    padding: .5rem;
+    margin: .5rem;
+    width: auto;
+    color: white;
+    background-color: #2c4c9c;
+    border: none;
+    border-radius: .3rem;
+    transition: all .2s;
+}
+#pdf-btn img{
+    margin-right: .3rem;
+}
+#pdf-btn:hover{
+    background-color: #fdc613;
+    color: #2c4c9c;
+}
 /*End of Case History # Page*/
 
 
