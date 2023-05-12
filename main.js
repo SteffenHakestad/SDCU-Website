@@ -1,7 +1,7 @@
 
-addEventListener("DOMContentLoaded", () => {
-    document.getElementById("radio1").checked = true;
-});
+// addEventListener("DOMContentLoaded", () => {
+//   document.getElementById("radio1").checked = true;
+// });
 
 //Function to change sliding images
 let counter = 1;
@@ -24,9 +24,9 @@ function stopInterval(){
 // If user manually selects a radio button, reset interval
 const radioButtons = document.querySelectorAll('input[type="radio"][name="radio-btn"]');
 radioButtons.forEach(radioButton => {
-  radioButton.addEventListener('change', () =>{
-    clearInterval(slideInterval);
-  });
+radioButton.addEventListener('change', () =>{
+  clearInterval(slideInterval);
+});
 });
 
 //Function to download PDF
