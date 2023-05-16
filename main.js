@@ -1,21 +1,25 @@
 
-// addEventListener("DOMContentLoaded", () => {
-//   document.getElementById("radio1").checked = true;
-// });
 
+let pauseDuration = 5000;
+let isPaused = false;
 //Function to change sliding images
 let counter = 1;
 function slideInterValFunc(){
-  document.getElementById('radio' + counter).checked = true;
-  counter++;
-  if(counter > 4){
-      counter = 1;
+  if(!isPaused){
+    document.getElementById('radio' + counter).checked = true;
+    counter++;
+    if(counter > 4){
+        counter = 1;
+    }
   }
 }
 let intervalId;
+
 //Start interval, gets called from body onload of index.html
 function startInterval(){
-  intervalId = setInterval(slideInterValFunc, 7000);
+  //every time the page is loaded, the first radio button is checked
+  document.getElementById("radio1").checked = true;
+  intervalId = setInterval(slideInterValFunc, 6000);
 }
 function stopInterval(){
   clearInterval(intervalId);
@@ -25,7 +29,10 @@ function stopInterval(){
 const radioButtons = document.querySelectorAll('input[type="radio"][name="radio-btn"]');
 radioButtons.forEach(radioButton => {
 radioButton.addEventListener('change', () =>{
-  clearInterval(slideInterval);
+  isPaused = true;
+  setTimeout(() => {
+    isPaused = false;
+  }, pauseDuration);
 });
 });
 

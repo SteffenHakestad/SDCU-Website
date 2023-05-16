@@ -37,10 +37,8 @@ body{
     align-items: center;
     cursor: pointer;
 }
-#navbar-logo-container img{
-    width: 5rem;
-    max-width: 7rem;
-    margin-right: .5rem;
+#logo-image{
+    width: 6rem;
     transition: width 0.3s ease-in-out;
 }
 #title-container{
@@ -88,7 +86,7 @@ body{
     text-shadow: 0px 0px 5px rgb(255, 255, 255);
 }
 .navbar-links li a:hover{
-    color: red;
+    color: #fdc613;
 }
 #toggle-button{
     cursor: pointer;
@@ -116,6 +114,7 @@ body{
     width: 100%;
     text-align: center;
     transition: top 0.3s ease-in-out;
+    
 }
 #mobile-links li{
     list-style: none;
@@ -132,15 +131,16 @@ body{
     color: red;
 }
 @media (max-width: 1000px){
-    #navbar-logo-container{
-        padding: 0;
+    /* #navbar-logo-container{
+        margin-top: .5rem;
     }
-    #navbar-logo-container img{
+    
+    #logo-image{
         width: 6rem;
     }
     .brand-title{
-        font-size: 3rem;
-    }
+        font-size: 2.5rem;
+    } */
     #toggle-button{
         display: flex;
     }
@@ -166,22 +166,8 @@ body{
         background-image: none;
         background-color: #fdc613;
     }
-    .bar{
-        background-color: #2c4c9c;
-    }
+
 }
-
-
-/* vvv To keep the hamburger menu from overlapping between the yellow and blue colors of the navbar background*/
-/* @media (max-width: 426px){
-    .toggle-button{
-        margin-right: 4rem;
-    }
-    .bar{
-        background-color: #2c4c9c;
-    }
-} */
-/*End of Navbar*/
 
 
 /*Start of Multi Page header*/
@@ -278,6 +264,12 @@ body{
     height: auto;
     min-width: 16rem;
 }
+@media (max-width: 600px){
+    #contact-inner-container p{
+        font-size: 1.5rem;
+    }
+}
+
 #email-text{
     text-decoration: none;
     color: #2c4c9c;
@@ -289,6 +281,9 @@ body{
 .light{
     font-family: 'Titillium Web', sans-serif;
 }
+#footer-spacer{
+    height: 1rem;
+}
 /* End of Footer. */
 
 
@@ -298,11 +293,13 @@ body{
 #slide-container{
     overflow: hidden;
     position: relative;
-    padding-top: 100px;
+    padding-top: 110px;
+    max-height: 55rem;
 }
 .slides{
     width: 500%;
     display: flex;
+    max-height: 55rem;
     
 }
 .slides input{
@@ -317,14 +314,32 @@ body{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transform: scale(1);
+    transition: all 5s;
 }
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: -20%;
+}
+#radio3:checked ~ .first{
+    margin-left: -40%;
+}
+#radio4:checked ~ .first{
+    margin-left: -60%;
+}
+
+
+
 .navigation-manual{
     position: absolute;
     display: flex;
     width: 100%;
     justify-content: center;
-    margin-top: -5rem;
-
+    margin-top: 45rem;
+    z-index: 5;
 }
 .manual-btn{
     border: 2px solid white;
@@ -339,24 +354,16 @@ body{
     background: #4164bd;
     transition: .5s;
 }
-#radio1:checked ~ .first{
-    margin-left: 0;
-}
-#radio2:checked ~ .first{
-    margin-left: -20%;
-}
-#radio3:checked ~ .first{
-    margin-left: -40%;
-}
-#radio4:checked ~ .first{
-    margin-left: -60%;
-}
+
+
+
 .navigation-auto{
     position: absolute;
     display: flex;
     width: 100%;
     justify-content: center;
-    margin-top: 50rem;
+    margin-top: 45rem;
+    z-index: 4;
 }
 .navigation-auto div{
     border: 2px solid white;
@@ -367,6 +374,10 @@ body{
 .navigation-auto div:not(:last-child){
     margin-right: 1rem;
 }
+
+
+
+
 #radio1:checked ~ .navigation-auto .auto-btn1{
     background: #4164bd;
 }
@@ -379,6 +390,42 @@ body{
 #radio4:checked ~ .navigation-auto .auto-btn4{
     background: #4164bd;
 }
+
+@media (max-width: 600px){
+    .navigation-manual{
+        margin-top: 12rem;
+    }
+    .navigation-auto{
+        margin-top: 12rem;
+    }
+}
+/* 
+@media (max-width: 800px){
+    .navigation-manual{
+        margin-top: 26rem;
+    }
+    .navigation-auto{
+        margin-top: 26rem;
+    }
+}
+@media (max-width: 1000px){
+    .navigation-manual{
+        margin-top: 32rem;
+    }
+    .navigation-auto{
+        margin-top: 32rem;
+    }
+}
+@media (max-width: 1300px){
+    .navigation-manual{
+        margin-top: 40rem;
+    }
+    .navigation-auto{
+        margin-top: 40rem;
+    }
+} */
+
+
 /* End of image slider. Home page*/
 
 
@@ -626,6 +673,10 @@ body{
     #partners-container{
         padding: 3rem 0rem 3rem 0rem;
     }
+    .partner-link img{
+        max-width: 120px;
+        max-height: 100px;
+    }
 }
 
 /* End of Partners. Home page */
@@ -682,13 +733,13 @@ body{
     width: 100%;
     height: 100%;
     border-radius: 1rem;
-    transform: scale(1.2);
+    transform: scale(1);
     transition: all .5s;
     z-index: 1;
     filter: blur(0px);
   }
 .solutions-page-button:hover .solutions-page-wrapper img{
-    transform: scale(1);
+    transform: scale(1.2);
     filter: blur(4px);
 }
 
@@ -1091,7 +1142,7 @@ body{
 .case-history-wrapper a{
     position: absolute;
     bottom: 40%;
-    left: 10%;
+    left: 15%;
     font-size: 2.5rem;
     color: white;
     z-index: 2;
@@ -1105,14 +1156,14 @@ body{
     width: 100%;
     height: 100%;
     border-radius: 1rem;
-    transform: scale(1.2);
+    transform: scale(1);
     transition: all .5s;
     z-index: 1;
     filter: blur(0px);
     max-width: 800px;
   }
 .case-history-button:hover .case-history-wrapper img{
-    transform: scale(1);
+    transform: scale(1.2);
     filter: blur(4px);
 }
 /* .case-history-button:hover .case-history-wrapper a{
@@ -1286,7 +1337,6 @@ body{
     border-top: 1px solid #2c4c9c;
     margin-top: 2rem;
     padding: 0;
-    background-color: green;
 }
 
 #more-case-studies-inner-container{
@@ -1345,14 +1395,14 @@ body{
     width: 100%;
     height: 100%;
     border-radius: 1rem;
-    transform: scale(1.2);
+    transform: scale(1);
     transition: all .5s;
     z-index: 1;
     filter: blur(0px);
     max-width: 800px;
   }
 .more-case-history-button:hover .more-case-history-btn-wrapper img{
-    transform: scale(1);
+    transform: scale(1.2);
     filter: blur(4px);
 }
 @media (max-width: 800px){
@@ -1436,28 +1486,6 @@ body{
     }
 }
 /*End of QHSE Main Container. QHSE Page*/
-/*Start of Certification Image Container. QHSE Page*/
-#certification-image-container{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 3rem 0rem 0rem 0rem;
-    width: 100%;
-    border-top: solid #2c4c9c 2px;
-    border-bottom: solid #2c4c9c 2px;
-}
-@media (max-width: 1000px){
-    #certification-image-container{
-        margin: 3rem 0rem 0rem 0rem;
-    }
-}
-@media (max-width: 600px){
-    #certification-image-container{
-        margin: 3rem 1rem 0rem 1rem;
-    }
-}
-/*End of Certification Image Container. QHSE Page*/
-
 /*End of QHSE Page*/
 
 /*Start of About Page*/
@@ -1529,15 +1557,19 @@ body{
     width: 100%;
     max-width: 600px;
     border-radius: 1rem;
+    margin-right: 1rem;
 }
 #hq-img-wrapper img{
     width: 100%;
     max-width: 1200px;
     border-radius: 1rem;
+    margin-left: 1rem;
+
 }
 @media (max-width: 1000px){
     #contact-img-container{
         flex-direction: column;
+        padding: 1rem 1rem 1rem 1rem;
     }
 }
 /*End of Contact Page img container. Contact Page*/
