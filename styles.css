@@ -281,7 +281,7 @@ body{
 .light{
     font-family: 'Titillium Web', sans-serif;
 }
-#footer-spacer{
+.footer-spacer{
     height: 1rem;
 }
 /* End of Footer. */
@@ -720,7 +720,7 @@ body{
     width: 100%;
     height: 100%;
 }
-.solutions-page-wrapper a{
+.solutions-page-wrapper div{
     position: absolute;
     bottom: 40%;
     left: 0;
@@ -790,7 +790,7 @@ body{
 
 
 /*Start of The concept text container. THE CONCEPT PAGE.*/
-#concept-text-container{
+.concept-text-container{
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -801,13 +801,13 @@ body{
 
     
 }
-#concept-text-container h3{
+.concept-text-container h3{
     font-family: 'Raleway', sans-serif;
     font-size: 1.5rem;
     margin-top: 2rem;
     margin-bottom: 1.5rem;
 }
-#concept-text-container p{
+.concept-text-container p{
     font-family: 'Titillium Web', sans-serif;
     font-size: 1.2rem;
     margin-bottom: 2rem;
@@ -833,6 +833,9 @@ body{
     border-radius: 1rem;
     background-color: white;
     margin: 2rem 40rem 2rem 40rem;
+}
+#video-container iframe{
+    border: none;
 }
 /*End of The concept video container. THE CONCEPT PAGE.*/
 @media (max-width: 1000px){
@@ -913,7 +916,7 @@ body{
 
 
 /*Start of Intervention Text Container. INTERVENTION PAGE.*/
-#intervention-text-container{
+.intervention-text-container{
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -922,13 +925,13 @@ body{
     width: 100%;   
     border-bottom: solid 1px #2c4c9c;
 }
-#intervention-text-container h3{
+.intervention-text-container h3{
     font-family: 'Raleway', sans-serif;
     font-size: 1.5rem;
     margin-top: 2rem;
     margin-bottom: 1.5rem;
 }
-#intervention-text-container p{
+.intervention-text-container p{
     font-family: 'Titillium Web', sans-serif;
     font-size: 1.2rem;
     margin-bottom: 2rem;
@@ -982,7 +985,7 @@ body{
     min-width: 300px;
 }
 
-#production-text-container{
+.production-text-container{
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -991,13 +994,13 @@ body{
     width: 100%;   
     border-bottom: solid 1px #2c4c9c;
 }
-#production-text-container h3{
+.production-text-container h3{
     font-family: 'Raleway', sans-serif;
     font-size: 1.5rem;
     margin-top: 2rem;
     margin-bottom: 1.5rem;
 }
-#production-text-container p{
+.production-text-container p{
     font-family: 'Titillium Web', sans-serif;
     font-size: 1.2rem;
     margin-bottom: 2rem;
@@ -1144,7 +1147,7 @@ body{
     width: 100%;
     height: 100%;
 }
-.case-history-wrapper a{
+.case-history-wrapper div{
     position: absolute;
     bottom: 40%;
     left: 15%;
@@ -1382,7 +1385,7 @@ body{
     width: 100%;
     height: 100%;
 }
-.more-case-history-btn-wrapper a{
+.more-case-history-btn-wrapper div{
     position: absolute;
     bottom: 40%;
     margin-left: 2.5rem;
